@@ -3,7 +3,7 @@
   Start editing to see some magic happen :)
 </p>
 <h1> Registration Form</h1>
-<form [formGroup]="RegistrationForm">
+<form [formGroup]="RegistrationForm" (ngSubmit)="submitForm()">
 
 <label> 
   FirstName: 
@@ -13,4 +13,25 @@
   LastName: 
   <input type = "text" formControlName="lastnameControl">
 </label>
+<div formGroupName="address">
+<h2>Address</h2>
+<label> 
+  House No: 
+  <input type = "text" formControlName="Houseno">
+</label>
+<label> 
+  Street: 
+  <input type = "text" formControlName="street">
+</label>
+<label> 
+  State: 
+  <input type = "text" formControlName="statee">
+</label>
+<label> 
+  ZIPCODE: 
+  <input type = "text" formControlName="ZipCode">
+</label>
+</div>
+
+<button type="submit">Submit</button>
 </form>

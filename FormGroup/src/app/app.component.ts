@@ -15,7 +15,13 @@ export class AppComponent{
     this.initializeForm();
     this.RegistrationForm = new FormGroup({
       firstnameControl : new FormControl('Saaandy'),
-      lastnameControl : new FormControl('Parker')
+      lastnameControl : new FormControl('Parker'),
+      address: new FormGroup({
+        Houseno: new FormControl(),
+        street: new FormControl(),
+        statee: new FormControl(),
+        ZipCode: new FormControl()
+      })
   
     });
   }
@@ -26,5 +32,9 @@ export class AppComponent{
   }
 
   name = 'Angular ' + VERSION.major;
+
+  submitForm(): void{
+    console.log(this.RegistrationForm);
+  }
 }
 
