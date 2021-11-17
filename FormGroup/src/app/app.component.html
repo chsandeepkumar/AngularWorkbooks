@@ -13,7 +13,12 @@
   LastName: 
   <input type = "text" formControlName="lastnameControl">
 </label>
-<div formGroupName="address">
+<label>
+  Subscribe:
+  <input type ="checkbox" formControlName="subscribe">
+</label>
+
+<div *ngIf="RegistrationForm.get('subscribe').value" formGroupName="address">
 <h2>Address</h2>
 <label> 
   House No: 
@@ -32,6 +37,16 @@
   <input type = "text" formControlName="ZipCode">
 </label>
 </div>
-
+<div formGroupName="contactinfo">
+  <h2> Contact Info</h2>
+  <label> 
+    Email:
+    <input type = "text" formControlName="email">
+  </label>
+  <label> 
+    Phone number:
+    <input type = "text" formControlName="phonenumber">
+  </label>
+</div>
 <button type="submit">Submit</button>
 </form>

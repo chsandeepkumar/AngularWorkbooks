@@ -2,10 +2,19 @@
 Form Group is one of the three fundamental building blocks used to define forms in angular, along with formcontrol and formarray.
 Form group aggregates the value of each child formControl into one object with each control name as the key.
 
+# Form Control
+Form Control are the classes that can hold both the data values and the validation information of any form element.
+
 # Form Model
 1) Structure that represents the form
 2) Tracks form state, values and child controls
 3) Nested Form Groups
+
+# Things learnt
+1) Representing a Form as FormGroup
+2) Submitting a form
+3) Inspecting the Form Model
+4) Nested Form Groups
 
 
 # FormGroup
