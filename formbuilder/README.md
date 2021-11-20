@@ -1,6 +1,12 @@
 # Things learnt in formbuilder
 
 We know to simply our forms using formbuilder and removing formcontrols
+Managing Controls Dynamically with FormArray
+1) FormControls
+2) FormGroups
+Add and Remove Controls from FormArray
+
+
 
 
 # Formbuilder
