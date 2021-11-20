@@ -1,0 +1,52 @@
+
+<p>
+  Start editing to see some magic happenn :)
+</p>
+<h1> Registration Form</h1>
+<form [formGroup]="RegistrationForm" (ngSubmit)="submitForm()">
+
+<label> 
+  FirstName: 
+  <input type = "text" formControlName="firstnameControl">
+</label>
+<label> 
+  LastName: 
+  <input type = "text" formControlName="lastnameControl">
+</label>
+<label>
+  Subscribe:
+  <input type ="checkbox" formControlName="subscribe">
+</label>
+
+<div *ngIf="RegistrationForm.get('subscribe').value" formGroupName="address">
+<h2>Address</h2>
+<label> 
+  House No: 
+  <input type = "text" formControlName="Houseno">
+</label>
+<label> 
+  Street: 
+  <input type = "text" formControlName="street">
+</label>
+<label> 
+  State: 
+  <input type = "text" formControlName="statee">
+</label>
+<label> 
+  ZIPCODE: 
+  <input type = "text" formControlName="ZipCode">
+</label>
+</div>
+<div formGroupName="contactinfo">
+  <h2> Contact Info</h2>
+  <label> 
+    Email:
+    <input type = "text" formControlName="email">
+  </label>
+  <label> 
+    Phone number:
+    <input type = "text" formControlName="phonenumber">
+  </label>
+</div>
+<button type="submit">Submit</button>
+</form>
