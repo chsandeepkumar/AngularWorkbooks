@@ -17,6 +17,26 @@
   Subscribe:
   <input type ="checkbox" formControlName="subscribe">
 </label>
+<div formArrayName="phoneNumbers" *ngFor="let p of phoneNumbers.controls; let i = index">
+<label>
+Phone numbers:
+<input type="text" [formControlName]="i">
+<button type="button" id="removePhone" (click)="removePhonenumber(i)">X</button>
+</label>
+
+
+</div>
+
+<button type="button" (click)="addPhoneNumber()"> Add Phone number</button>
+<div formArrayName="subjects" *ngFor="let s of subjects.controls; let i =index">
+  <label>
+    Subjects:
+    <input type = "text" [formControlName]="i">
+ 
+  </label>
+ 
+   </div>
+   <button type="button" (click) ="addsubjects()"> Add subjects </button>
 
 <div *ngIf="RegistrationForm.get('subscribe').value" formGroupName="address">
 <h2>Address</h2>
@@ -47,6 +67,10 @@
     Phone number:
     <input type = "text" formControlName="phonenumber">
   </label>
+
+  
 </div>
 <button type="submit">Submit</button>
+
+
 </form>
