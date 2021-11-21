@@ -21,11 +21,11 @@
       Phone number1:
       <input type=" text" formControlName="phone1" placeholder="required">
       <div *ngIf ="(phone1.touched || phone1.dirty) && phone1.invalid" class="alert">
-        <span *ngIf ="phone1.errors.required" class="alert">
+        <span *ngIf ="phone1.errors?.required" class="alert">
           Phone number Required
         </span>
 
-        <span *ngIf ="phone1.errors.invalidPhone" class="alert">
+        <span *ngIf ="phone1.errors?.invalidPhone" class="alert">
           Phone number must be formatted in the format xxx-xxx-xxxx
         </span>
 
