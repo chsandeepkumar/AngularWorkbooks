@@ -1,10 +1,10 @@
 # Validations
 Things Learnt in this Section:
 
-Built-in Validators
-Displaying Error Messages
-Custom Validators
-Cross-Field Validation
+1)Built-in Validators
+2)Displaying Error Messages
+3)Custom Validators
+4)Cross-Field Validation
 
 # Validations
 
