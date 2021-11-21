@@ -1,0 +1,50 @@
+<h1> Application Form</h1>
+<form [formGroup]="applicationForm" (ngSubmit)="apply()">
+
+  <h2> Contact Info</h2>
+  <label>
+    Full Name:
+    <input type="text" formControlName="nameControl" placeholder="required">
+    <span *ngIf ="(nameControl.touched || nameControl.dirty) && nameControl.invalid" class="alert">
+      Name is Required
+    </span>
+    <br>
+    <label>
+      Email1:
+      <input type ="text" formControlName="email1" placeholder="required">
+      <span *ngIf ="(email1.touched || email1.dirty) && email1.invalid" class="alert">
+        Email is Required
+      </span>
+    </label>
+  </label>
+  
+  <div formGroupName="contactInfo">
+    <label>
+      Email:
+      <input type ="text" formControlName="email">
+      
+    </label>
+    <br>
+    <label>
+      Phone number:
+      <input type=" text" formControlName="phone" placeholder="required">
+    </label>
+  </div>
+  <h2>Addition info</h2>
+  <label>
+    Fav Hobby:
+    <input type="text" formControlName="hobby" placeholder="optional">
+  </label>
+  <label>
+    Are you 18+?
+    <input type="radio" value="yes" formControlName="over18">
+    yes
+    <input type="radio" value="no" formControlName="over18">
+    No
+  </label>
+  <button id="apply_btn" [disabled]= "applicationForm.invalid" type="submit">Apply</button>
+
+
+</form>
+
+FormValid : {{ applicationForm.valid }}
