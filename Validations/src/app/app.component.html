@@ -5,7 +5,7 @@
   <label>
     Full Name:
     <input type="text" formControlName="nameControl" placeholder="required">
-    <span *ngIf ="(nameControl.touched || nameControl.dirty) && nameControl.invalid" class="alert">
+    <span *ngIf ="(nameControl.touched || nameControl.dirty) && nameControl.invalid " class="alert">
       Name is Required
     </span>
     <br>
@@ -16,10 +16,29 @@
         Email is Required
       </span>
     </label>
+    <br>
+    <label>
+      Phone number1:
+      <input type=" text" formControlName="phone1" placeholder="required">
+      <div *ngIf ="(phone1.touched || phone1.dirty) && phone1.invalid" class="alert">
+        <span *ngIf ="phone1.errors.required" class="alert">
+          Phone number Required
+        </span>
+
+        <span *ngIf ="phone1.errors.invalidPhone" class="alert">
+          Phone number must be formatted in the format xxx-xxx-xxxx
+        </span>
+
+      </div>
+      
+    </label>
   </label>
   
   <div formGroupName="contactInfo">
     <label>
+      <br>
+      Without Validations
+      <br>
       Email:
       <input type ="text" formControlName="email">
       
@@ -28,6 +47,7 @@
     <label>
       Phone number:
       <input type=" text" formControlName="phone" placeholder="required">
+     
     </label>
   </div>
   <h2>Addition info</h2>
